@@ -1,0 +1,189 @@
+html, body, #root{
+    margin: 0;
+    color: aliceblue;
+    background-color: black;
+    height: 100%;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+li{
+    font-size: 20px;
+}
+
+.image-container{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border-radius: 50%;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.svg-container{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url('http://localhost:3000/layered-waves-haikei-bottom-2.svg');
+    height:50%;
+    width: 100%;
+    background-size: cover;
+    transform: translate(0, -20px);
+}
+
+.svg-upper-container{
+    width: 100%;
+    transform: translate(0, 20%);
+    background-image: url('http://localhost:3000/layered-waves-haikei-upper-2.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:50%;
+    margin-top: 0%;
+}
+
+.curve{
+    position: absolute;
+    height: 255px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: black;
+    transform: translate(85%, 60%);
+}
+
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: blue;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1645120972 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translate(0, 00px);
+}
+
+.custom-shape-divider-top-1645120972 svg {
+    position: relative;
+    display: block;
+    width: calc(202% + 1.3px);
+    height: 189px;
+}
+
+.custom-shape-divider-top-1645120972 .shape-fill {
+    fill: #201D1D;
+}
+
+.media-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 100%;
+    margin: 10px;
+}
+
+.media-button{
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    background-color: transparent;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: transparent;
+    margin: 15px;
+}
+
+.projects-tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15vh;
+    margin-top: 0px;
+}
+
+.projects-container{
+    /* position: relative; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.project-card{
+    height: 80%;
+    width: 25%;
+    background-color: rgb(22, 20, 20);
+    /* border: solid 1px white; */
+    /* border-bottom: none; */
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-image{
+    width: 100%;
+    height: 100%;
+    /* border-bottom: solid 1px blue; */
+}
+
+.project-tittle{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: solid 1px red; */
+}
+
+.project-tech{
+    width: 100%;
+    height: 100%;
+    /* border-bottom: solid 1px green; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.icon{
+    font-size: 30px;
+}
