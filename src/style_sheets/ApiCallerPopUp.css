@@ -1,0 +1,91 @@
+.popUp-shadow-container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.822);
+    margin: 0;
+}
+
+.popUp-form{
+    width: 50%;
+    height: 40%;
+    background-color: rgb(34, 31, 31);
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.end-point{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+
+.input-label{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.input-form{
+    width: 50%;
+    margin-left: 20px;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline-width: 0;
+}
+
+.meaning-container{
+    height: 100%;
+    text-align: center;
+    overflow: scroll;
+}
+
+.word-search-container{
+    margin-left: 20px;
+    font-size: 20px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.meaning-container{
+    width: 100%;
+    height: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+}
+
+::placeholder{
+    color: white;
+    font-size: 20px;
+}
+
+.btns-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0;
+}
+
+.btn{
+    background-color: transparent;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}

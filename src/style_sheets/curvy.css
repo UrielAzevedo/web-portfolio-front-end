@@ -19,8 +19,8 @@ li{
 }
 
 .image-container{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     margin: 20px;
     border-radius: 50%;
     margin-top: 10%;
@@ -104,6 +104,7 @@ li{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-size: 40px 40px;
     height: 5vh;
     width: 100%;
     margin: 10px;
@@ -113,12 +114,15 @@ li{
     height: 40px;
     border-radius: 50%;
     width: 40px;
+    max-width: 40px;
+    max-height: 40px;
     background-color: transparent;
     background-position: bottom;
-    background-size: cover;
+    display: block;
     background-repeat: no-repeat;
     border: transparent;
     margin: 15px;
+    cursor: pointer;
 }
 
 .projects-tittle{
@@ -127,7 +131,7 @@ li{
     justify-content: center;
     position: relative;
     width: 100%;
-    margin-bottom: 15vh;
+    margin-bottom: 8vh;
     margin-top: 0px;
 }
 
@@ -144,8 +148,6 @@ li{
     height: 80%;
     width: 25%;
     background-color: rgb(22, 20, 20);
-    /* border: solid 1px white; */
-    /* border-bottom: none; */
     margin: 20px;
     margin-left: 40px;
     margin-right: 40px;
@@ -158,7 +160,13 @@ li{
 .project-image{
     width: 100%;
     height: 100%;
-    /* border-bottom: solid 1px blue; */
+    overflow: hidden;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }
 
 .project-tittle{
@@ -186,4 +194,10 @@ li{
 
 .icon{
     font-size: 30px;
+}
+
+.api-button{
+    height: 100%;
+    width: 100%;
+    background-image: "http://localhost:3000/play-btn.svg";
 }
