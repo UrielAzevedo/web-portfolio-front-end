@@ -3,6 +3,8 @@ html, body, #root{
     color: aliceblue;
     background-color: black;
     height: 100%;
+    width: 100vw;
+    overflow: auto;
 }
 
 section{
@@ -34,13 +36,15 @@ li{
     height:50%;
     width: 100%;
     background-size: cover;
+    background-position: top;
     transform: translate(0, -20px);
 }
 
 .svg-upper-container{
     width: 100%;
-    transform: translate(0, 20%);
+    /* transform: translate(0, 20%); */
     background-image: url('http://localhost:3000/layered-waves-haikei-upper-2.svg');
+    vertical-align: bottom;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,7 +89,7 @@ li{
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: translate(0, 00px);
+    /* transform: translate(0, 00px); */
 }
 
 .custom-shape-divider-top-1645120972 svg {
@@ -93,6 +97,8 @@ li{
     display: block;
     width: calc(202% + 1.3px);
     height: 189px;
+    min-height: 189px;
+    /* height: 189px; */
 }
 
 .custom-shape-divider-top-1645120972 .shape-fill {
@@ -136,7 +142,6 @@ li{
 }
 
 .projects-container{
-    /* position: relative; */
     height: 80vh;
     width: 100%;
     display: flex;
@@ -147,6 +152,9 @@ li{
 .project-card{
     height: 80%;
     width: 25%;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 400px;
     background-color: rgb(22, 20, 20);
     margin: 20px;
     margin-left: 40px;
@@ -175,13 +183,11 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-bottom: solid 1px red; */
 }
 
 .project-tech{
     width: 100%;
     height: 100%;
-    /* border-bottom: solid 1px green; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -200,4 +206,12 @@ li{
     height: 100%;
     width: 100%;
     background-image: "http://localhost:3000/play-btn.svg";
+}
+
+@media screen and (max-width: 900px){
+    .projects-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
