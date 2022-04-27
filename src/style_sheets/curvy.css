@@ -131,14 +131,29 @@ li{
     cursor: pointer;
 }
 
-.projects-tittle{
+.projects-tittle-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     width: 100%;
     margin-bottom: 8vh;
     margin-top: 0px;
+}
+
+.projects-tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.projects-tittle-disclaimer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .projects-container{

@@ -48,7 +48,10 @@ function MainPage() {
       <div className='svg-upper-container'/>
       <div className='svg-container'/>
 
-      <h1 className='projects-tittle'>Projects</h1>
+      <div className='projects-tittle-container'>
+        <h1> Projects </h1>
+        <h2> ~20 sec heroku delay </h2>
+      </div>
 
       <div className='projects-container'>
         <div className='project-card'>
