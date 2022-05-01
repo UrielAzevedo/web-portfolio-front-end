@@ -13,16 +13,24 @@ const ApiCallerPopUp = (props) => {
     const getRequest = {
         method: 'GET',
         headers: {
-            "Content-Type": "text/plain"
+            "Content-Type": "applciation/json"
         }
     }
 
     const submitButton = () => {
         const formattedEndPoint = apiEndPoint.replace(/\s+/g, '-').toLowerCase()
-        fetch(`http://localhost:5504/word-meaning/?word=${wordSearch}&endPoint=${formattedEndPoint}`, getRequest)
+        console.log(formattedEndPoint)
+        console.log(wordSearch)
+        fetch(`https://etymology-api.herokuapp.com/${formattedEndPoint}/${wordSearch}`, getRequest)
         .catch(err => console.log(err))
-        .then(res => res.text())
-        .then(meaning => setWordMeaning(meaning))
+        .then(res => res.json())
+        .then(meaning => {
+            if(meaning[0]) {
+                setWordMeaning(meaning[0].meaning)
+                return
+            }
+            setWordMeaning("word not found")
+        })
     }
 
     useEffect (() => {
