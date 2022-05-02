@@ -53,12 +53,11 @@ const ApiCallerPopUp = (props) => {
                 </div>
                 <label className='query-container'>
                     <input type="text" className='query-input' placeholder='word searched' onFocus={(e) => e.target.placeholder = ""} onBlur={(e) => {e.target.placeholder="word searched"}} onChange={e => setWordSearch(e.target.value)}/>
-                    {/* <button className='api-end-point-menu' onClick={() => (setEndPointMenu(!endpointMenu))}> {apiEndPoint} {endpointMenu&&<EndPointMenu apiEndPoint = {apiEndPoint} setEndPoint={setEndPoint}/>} <div className='svg-arrow-down-container'> <img src="http://localhost:3000/arrow-down.svg" alt="arrow-down"/> </div></button> */}
                     <div className='api-end-point-menu'> 
                         <button className='api-btn' onClick={() => (setEndPointMenu(!endpointMenu))}>
                             {apiEndPoint} 
                             <div className='svg-arrow-down-container'> 
-                                <img src="http://localhost:3000/arrow-down.svg" alt="arrow-down"/> 
+                                <img src="arrow-down.svg" alt="arrow-down"/> 
                             </div> 
                         </button>
                         {endpointMenu&&<EndPointMenu setEndPoint={setApiEndPoint}/>} 

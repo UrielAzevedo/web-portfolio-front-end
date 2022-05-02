@@ -32,7 +32,7 @@ li{
 .svg-container{
     width: 100%;
     background-repeat: no-repeat;
-    background-image: url('http://localhost:3000/layered-waves-haikei-bottom-2.svg');
+    background-image: url('https://main.d3ilhe4sho0azv.amplifyapp.com/layered-waves-haikei-bottom-2.svg');
     height:50%;
     width: 100%;
     background-size: cover;
@@ -43,7 +43,7 @@ li{
 .svg-upper-container{
     width: 100%;
     /* transform: translate(0, 20%); */
-    background-image: url('http://localhost:3000/layered-waves-haikei-upper-2.svg');
+    background-image: url('https://main.d3ilhe4sho0azv.amplifyapp.com/layered-waves-haikei-upper-2.svg');
     vertical-align: bottom;
     background-position: bottom;
     background-size: cover;
@@ -220,7 +220,7 @@ li{
 .api-button{
     height: 100%;
     width: 100%;
-    background-image: "http://localhost:3000/play-btn.svg";
+    background-image: "https://main.d3ilhe4sho0azv.amplifyapp.com/play-btn.svg";
 }
 
 @media screen and (max-width: 900px){
