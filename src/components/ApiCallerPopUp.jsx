@@ -13,16 +13,24 @@ const ApiCallerPopUp = (props) => {
     const getRequest = {
         method: 'GET',
         headers: {
-            "Content-Type": "text/plain"
+            "Content-Type": "applciation/json"
         }
     }
 
     const submitButton = () => {
         const formattedEndPoint = apiEndPoint.replace(/\s+/g, '-').toLowerCase()
-        fetch(`http://localhost:5504/word-meaning/?word=${wordSearch}&endPoint=${formattedEndPoint}`, getRequest)
+        console.log(formattedEndPoint)
+        console.log(wordSearch)
+        fetch(`https://etymology-api.herokuapp.com/${formattedEndPoint}/${wordSearch}`, getRequest)
         .catch(err => console.log(err))
-        .then(res => res.text())
-        .then(meaning => setWordMeaning(meaning))
+        .then(res => res.json())
+        .then(meaning => {
+            if(meaning[0]) {
+                setWordMeaning(meaning[0].meaning)
+                return
+            }
+            setWordMeaning("word not found")
+        })
     }
 
     useEffect (() => {
@@ -45,12 +53,11 @@ const ApiCallerPopUp = (props) => {
                 </div>
                 <label className='query-container'>
                     <input type="text" className='query-input' placeholder='word searched' onFocus={(e) => e.target.placeholder = ""} onBlur={(e) => {e.target.placeholder="word searched"}} onChange={e => setWordSearch(e.target.value)}/>
-                    {/* <button className='api-end-point-menu' onClick={() => (setEndPointMenu(!endpointMenu))}> {apiEndPoint} {endpointMenu&&<EndPointMenu apiEndPoint = {apiEndPoint} setEndPoint={setEndPoint}/>} <div className='svg-arrow-down-container'> <img src="http://localhost:3000/arrow-down.svg" alt="arrow-down"/> </div></button> */}
                     <div className='api-end-point-menu'> 
                         <button className='api-btn' onClick={() => (setEndPointMenu(!endpointMenu))}>
                             {apiEndPoint} 
                             <div className='svg-arrow-down-container'> 
-                                <img src="http://localhost:3000/arrow-down.svg" alt="arrow-down"/> 
+                                <img src="arrow-down.svg" alt="arrow-down"/> 
                             </div> 
                         </button>
                         {endpointMenu&&<EndPointMenu setEndPoint={setApiEndPoint}/>} 
