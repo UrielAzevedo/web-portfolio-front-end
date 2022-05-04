@@ -19,8 +19,6 @@ const ApiCallerPopUp = (props) => {
 
     const submitButton = () => {
         const formattedEndPoint = apiEndPoint.replace(/\s+/g, '-').toLowerCase()
-        console.log(formattedEndPoint)
-        console.log(wordSearch)
         fetch(`https://etymology-api.herokuapp.com/${formattedEndPoint}/${wordSearch}`, getRequest)
         .catch(err => console.log(err))
         .then(res => res.json())
